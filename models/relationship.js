@@ -1,7 +1,7 @@
 const models = require('./');
-/*const Attraction = models.Attraction;
-const Pass = models.Pass;
 
-Attraction.associate(models);
-Pass.associate(models);*/
+const Configuration = models.Configuration;
+const Element = models.Element;
 
+Configuration.associate(models);
+Element.associate(models);
