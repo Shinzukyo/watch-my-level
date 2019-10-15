@@ -9,4 +9,5 @@ module.exports = {
     ConfigurationElementLinkController: require('./element.controller'),
     OrderController: require('./order.controller'),
     OrderConfigurationLinkController: require('./orderConfigurationLink.controller'),
+    GameLevelController: require('./gameLevel.controller'),
 };

@@ -11,6 +11,7 @@ module.exports = {
     ConfigurationElementLink: require('./configurationElementLink'),
     Order: require('./order'),
     OrderConfigurationLink: require('./orderConfigurationLink'),
+    GameLevel: require('./gameLevel'),
 };
 
 require('./relationship');
