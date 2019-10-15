@@ -8,4 +8,5 @@ module.exports = {
     ElementController: require('./element.controller'),
     ConfigurationElementLinkController: require('./element.controller'),
     OrderController: require('./order.controller'),
+    OrderConfigurationLinkController: require('./orderConfigurationLink.controller'),
 };

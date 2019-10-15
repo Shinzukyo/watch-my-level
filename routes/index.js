@@ -8,6 +8,7 @@ class RouterBuilder {
         app.use('/elementType', require('./elementType.router'));
         app.use('/element', require('./element.router'));
         app.use('/order', require('./order.router'));
+        app.use('/orderConfigurationLink', require('./orderConfigurationLink.router'));
     }
 }
 

@@ -10,6 +10,7 @@ module.exports = {
     Element: require('./element'),
     ConfigurationElementLink: require('./configurationElementLink'),
     Order: require('./order'),
+    OrderConfigurationLink: require('./orderConfigurationLink'),
 };
 
 require('./relationship');
