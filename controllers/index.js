@@ -10,4 +10,5 @@ module.exports = {
     OrderController: require('./order.controller'),
     OrderConfigurationLinkController: require('./orderConfigurationLink.controller'),
     GameLevelController: require('./gameLevel.controller'),
+    ScoreController: require('./score.controller'),
 };

@@ -5,9 +5,9 @@ const Model = require('sequelize').Model;
 const sequelize = require('./database').sequelize;
 const Sequelize = require('./database').Sequelize;
 
-class User extends Model{}
+class Score extends Model{}
 
-User.init({
+Score.init({
     id: {
         type: Sequelize.INTEGER,
         unique: true,
@@ -15,14 +15,7 @@ User.init({
         primaryKey: true,
         autoIncrement: true
     },
-    username: Sequelize.STRING,
-    password: Sequelize.STRING,
+    value: Sequelize.INTEGER,
 }, {timestamps: false, sequelize});
 
-User.associate = function(models){
-    User.hasMany(models.Score, {
-        foreignKey: 'idUser'
-    });
-};
-
-module.exports = User;
+module.exports = Score;

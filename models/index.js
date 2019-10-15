@@ -12,6 +12,7 @@ module.exports = {
     Order: require('./order'),
     OrderConfigurationLink: require('./orderConfigurationLink'),
     GameLevel: require('./gameLevel'),
+    Score: require('./score'),
 };
 
 require('./relationship');

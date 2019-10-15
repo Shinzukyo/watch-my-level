@@ -23,6 +23,9 @@ GameLevel.associate = function(models){
         foreignKey: 'idElementType'
     });
 
+    GameLevel.hasMany(models.Score, {
+        foreignKey: 'idGameLevel'
+    });
 };
 
 module.exports = GameLevel;

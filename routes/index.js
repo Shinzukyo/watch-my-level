@@ -10,6 +10,7 @@ class RouterBuilder {
         app.use('/order', require('./order.router'));
         app.use('/orderConfigurationLink', require('./orderConfigurationLink.router'));
         app.use('/gameLevel', require('./gameLevel.router'));
+        app.use('/score', require('./score.router'));
     }
 }
 
