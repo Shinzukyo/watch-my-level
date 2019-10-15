@@ -15,9 +15,7 @@ OrderConfigurationLink.init({
         primaryKey: true,
         autoIncrement: true
     },
-    title: Sequelize.STRING,
-    description: Sequelize.STRING,
-    link: Sequelize.STRING
+    price: Sequelize.FLOAT
 }, {timestamps: false, sequelize});
 
 module.exports = OrderConfigurationLink;

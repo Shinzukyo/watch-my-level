@@ -26,6 +26,10 @@ Configuration.associate = function(models){
     Configuration.hasMany(models.ConfigurationElementLink, {
         foreignKey: 'idConfiguration'
     });
+
+    Configuration.hasMany(models.OrderConfigurationLink, {
+        foreignKey: 'idConfiguration'
+    });
 };
 
 module.exports = Configuration;

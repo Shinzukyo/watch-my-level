@@ -17,4 +17,11 @@ Order.init({
     }
 }, {timestamps: false, sequelize});
 
+Order.associate = function(models){
+
+    Order.hasMany(models.OrderConfigurationLink, {
+        foreignKey: 'idOrder'
+    });
+};
+
 module.exports = Order;
