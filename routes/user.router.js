@@ -24,6 +24,18 @@ router.put('/:id', async (req, res) => {
     res.status(404).end();
 });
 
+router.get('/criteria', async (req, res) => {
+    console.log("_________________________________________________________req begin");
+    console.log(req);
+    console.log("_________________________________________________________req end");
+
+    const p = await UserController.getByParams(req.body);
+    if(p) {
+        return res.json(p);
+    }
+    res.status(404).end();
+});
+
 router.get('/:id', async (req, res) => {
     const p = await UserController.getById(req.params.id);
     if(p) {
