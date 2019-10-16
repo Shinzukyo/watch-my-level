@@ -31,6 +31,12 @@ class Controller {
         });
     }
 
+    async getByParams(params) {
+        return this.model.findOne({
+            where: params
+        });
+    }
+
     async update(id, fields) {
         if(id === undefined){
             return undefined;

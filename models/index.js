@@ -13,9 +13,13 @@ module.exports = {
     OrderConfigurationLink: require('./orderConfigurationLink'),
     GameLevel: require('./gameLevel'),
     Score: require('./score'),
+    Media: require('./media'),
 };
 
 require('./relationship');
 
-//db.sequelize.sync({force:true});
-db.sequelize.sync();
+if (process.argv[2] === 'deleteDb') {
+    db.sequelize.sync({force:true});
+} else {
+    db.sequelize.sync();
+}

@@ -23,7 +23,6 @@ Configuration.associate = function(models){
         foreignKey: 'idUser'
     });
 
-
     Configuration.belongsToMany(models.Element, {
         through: 'configurationElementLinks',
         foreignKey: 'idConfiguration',
@@ -36,9 +35,6 @@ Configuration.associate = function(models){
         otherKey: 'idOrder'
     });
 
-    /*Configuration.hasMany(models.OrderConfigurationLink, {
-        foreignKey: 'idConfiguration'
-    });*/
 };
 
 module.exports = Configuration;
