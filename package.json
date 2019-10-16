@@ -1,0 +1,33 @@
+{
+  "name": "watch-my-level",
+  "version": "1.0.0",
+  "description": "Watch My Level mobile app API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shinzukyo/watch-my-level.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shinzukyo/watch-my-level/issues"
+  },
+  "homepage": "https://github.com/Shinzukyo/watch-my-level#readme",
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.8.5"
+  }
+}
