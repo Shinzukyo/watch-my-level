@@ -13,9 +13,10 @@ module.exports = {
     OrderConfigurationLink: require('./orderConfigurationLink'),
     GameLevel: require('./gameLevel'),
     Score: require('./score'),
+    Media: require('./media'),
 };
 
 require('./relationship');
 
-//db.sequelize.sync({force:true});
-db.sequelize.sync();
+db.sequelize.sync({force:true});
+//db.sequelize.sync();
