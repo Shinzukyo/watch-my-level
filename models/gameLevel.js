@@ -23,8 +23,14 @@ GameLevel.associate = function(models){
         foreignKey: 'idElementType'
     });
 
-    GameLevel.hasMany(models.Score, {
+    /*GameLevel.hasMany(models.Score, {
         foreignKey: 'idGameLevel'
+    });*/
+
+    GameLevel.belongsToMany(models.User, {
+        through: 'score',
+        foreignKey: 'idGameLevel',
+        otherKey: 'idUser'
     });
 };
 

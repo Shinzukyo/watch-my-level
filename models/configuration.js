@@ -23,9 +23,6 @@ Configuration.associate = function(models){
         foreignKey: 'idUser'
     });
 
-    /*Configuration.hasMany(models.ConfigurationElementLink, {
-        foreignKey: 'idConfiguration'
-    });*/
 
     Configuration.belongsToMany(models.Element, {
         through: 'configurationElementLinks',
@@ -33,9 +30,15 @@ Configuration.associate = function(models){
         otherKey: 'idElement'
     });
 
-    Configuration.hasMany(models.OrderConfigurationLink, {
-        foreignKey: 'idConfiguration'
+    Configuration.belongsToMany(models.Order, {
+        through: 'orderConfigurationLink',
+        foreignKey: 'idConfiguration',
+        otherKey: 'idOrder'
     });
+
+    /*Configuration.hasMany(models.OrderConfigurationLink, {
+        foreignKey: 'idConfiguration'
+    });*/
 };
 
 module.exports = Configuration;

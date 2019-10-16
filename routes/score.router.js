@@ -24,6 +24,15 @@ router.put('/:id', async (req, res) => {
     res.status(404).end();
 });
 
+router.get('/ranking', async (req, res) => {
+    const p = await ScoreController.getRankingWithUser(req.params.id);
+    if(p) {
+        return res.json(p);
+    }
+    res.status(404).end();
+
+});
+
 router.get('/:id', async (req, res) => {
     const p = await ScoreController.getById(req.params.id);
     if(p) {

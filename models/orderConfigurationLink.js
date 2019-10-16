@@ -8,14 +8,11 @@ const Sequelize = require('./database').Sequelize;
 class OrderConfigurationLink extends Model{}
 
 OrderConfigurationLink.init({
-    id: {
-        type: Sequelize.INTEGER,
-        unique: true,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
-    },
     price: Sequelize.FLOAT
-}, {timestamps: false, sequelize});
+}, {
+    timestamps: false,
+    sequelize,
+    modelName: 'orderConfigurationLink'
+});
 
 module.exports = OrderConfigurationLink;

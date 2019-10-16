@@ -1,0 +1,58 @@
+{
+  "elementTypes" : [
+    {
+      "name" : "Cadran",
+      "description" : "Super description du cadran"
+    },
+    {
+      "name" : "Boitier",
+      "description" : "Super description du boitier"
+    },
+    {
+      "name" : "Bracelet",
+      "description" : "Super description du bracelet"
+    }
+  ],
+  "gameLevels" : [
+    {
+      "idElementType" : 1
+    },
+    {
+      "idElementType" : 2
+    },
+    {
+      "idElementType" : 3
+    }
+  ],
+  "user" : [
+    {
+      "username": "test",
+      "password": "test"
+    },
+    {
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "username": "user",
+      "password": "user"
+    }
+  ],
+  "score" : [
+    {
+      "value" : 4000,
+      "idUser": 1,
+      "idGameLevel": 1
+    },
+    {
+      "value" : 7000,
+      "idUser": 1,
+      "idGameLevel": 2
+    },
+    {
+      "value" : 13333,
+      "idUser": 1,
+      "idGameLevel": 3
+    }
+  ]
+}
