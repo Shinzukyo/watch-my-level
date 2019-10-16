@@ -15,7 +15,8 @@ ElementType.init({
         primaryKey: true,
         autoIncrement: true
     },
-    name: Sequelize.STRING
+    name: Sequelize.STRING,
+    description: Sequelize.STRING,
 }, {timestamps: false, sequelize});
 
 module.exports = ElementType;

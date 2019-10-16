@@ -25,8 +25,14 @@ Element.associate = function(models){
         foreignKey: 'idElementType'
     });
 
-    Element.hasMany(models.ConfigurationElementLink, {
+    /*Element.hasMany(models.ConfigurationElementLink, {
         foreignKey: 'idElement'
+    });*/
+
+    Element.belongsToMany(models.Configuration, {
+        through: 'configurationElementLinks',
+        foreignKey: 'idElement',
+        otherKey: 'idConfiguration'
     });
 };
 

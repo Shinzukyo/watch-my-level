@@ -15,6 +15,9 @@ ConfigurationElementLink.init({
         primaryKey: true,
         autoIncrement: true
     }
-}, {timestamps: false, sequelize});
+}, {timestamps: false,
+    sequelize,
+    modelName: 'configurationElementLinks'
+});
 
 module.exports = ConfigurationElementLink;
