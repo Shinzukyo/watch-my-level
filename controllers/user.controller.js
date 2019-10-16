@@ -1,3 +1,5 @@
+
+
 'use strict';
 
 const models = require('../models');
@@ -9,6 +11,24 @@ const Controller = require('./controller');
 class UserController extends Controller{
     constructor() {
         super(User);
+    }
+
+    async login(body) {
+        return await User.findOne({
+            where: {
+                username: body.username
+            }
+        }).then(user =>{
+            if (!user) {
+                return {success: false, message: "User not found."};
+            } else {
+                if (user.password === body.password ) {
+                    return {success: true, user: user};
+                } else {
+                    return {success: false, message: "Wrong password"};
+                }
+            }
+        });
     }
 }
 

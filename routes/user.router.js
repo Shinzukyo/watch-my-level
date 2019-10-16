@@ -24,6 +24,16 @@ router.put('/:id', async (req, res) => {
     res.status(404).end();
 });
 
+router.post('/login', async (req, res) => {
+    const p = await UserController.login(req.body);
+    if(p.success) {
+        res.json(p);
+    } else {
+        res.status(401).send(p).end();
+    }
+
+});
+
 router.get('/criteria', async (req, res) => {
     console.log("_________________________________________________________req begin");
     console.log(req);
