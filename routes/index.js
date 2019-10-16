@@ -12,7 +12,7 @@ class RouterBuilder {
         app.use('/configurationElementLink', require('./configurationElementLink.router'));
         app.use('/gameLevel', require('./gameLevel.router'));
         app.use('/score', require('./score.router'));
-
+        app.use('/media', require('./media.router'));
     }
 }
 
