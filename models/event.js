@@ -17,7 +17,8 @@ Event.init({
     },
     title: Sequelize.STRING,
     description: Sequelize.STRING,
-    link: Sequelize.STRING
+    link: Sequelize.STRING,
+    image: Sequelize.STRING,
 }, {timestamps: false, sequelize});
 
 module.exports = Event;

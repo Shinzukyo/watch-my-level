@@ -23,8 +23,14 @@ Configuration.associate = function(models){
         foreignKey: 'idUser'
     });
 
-    Configuration.hasMany(models.ConfigurationElementLink, {
+    /*Configuration.hasMany(models.ConfigurationElementLink, {
         foreignKey: 'idConfiguration'
+    });*/
+
+    Configuration.belongsToMany(models.Element, {
+        through: 'configurationElementLinks',
+        foreignKey: 'idConfiguration',
+        otherKey: 'idElement'
     });
 
     Configuration.hasMany(models.OrderConfigurationLink, {
