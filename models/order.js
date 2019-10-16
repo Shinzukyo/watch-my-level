@@ -18,9 +18,10 @@ Order.init({
 }, {timestamps: false, sequelize});
 
 Order.associate = function(models){
-
-    Order.hasMany(models.OrderConfigurationLink, {
-        foreignKey: 'idOrder'
+    Order.belongsToMany(models.Configuration, {
+        through: 'orderConfigurationLink',
+        foreignKey: 'idOrder',
+        otherKey: 'idConfiguration'
     });
 };
 

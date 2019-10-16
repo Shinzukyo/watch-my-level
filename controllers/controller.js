@@ -6,8 +6,17 @@ class Controller {
         this.model = model;
     }
 
-    async add(fields) {
-        return this.model.create(fields);
+    async add(arrayOrFields) {
+        if ( arrayOrFields.constructor === Array ) {
+            const result = [];
+            for( const fields of arrayOrFields) {
+                result.push(await this.add(fields));
+            }
+            return result;
+        }else{
+            return this.model.create(arrayOrFields);
+        }
+
     }
 
     async getAll() {

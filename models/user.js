@@ -23,6 +23,12 @@ User.associate = function(models){
     User.hasMany(models.Score, {
         foreignKey: 'idUser'
     });
+
+    User.belongsToMany(models.GameLevel, {
+        through: 'score',
+        foreignKey: 'idUser',
+        otherKey: 'idGameLevel'
+    });
 };
 
 module.exports = User;

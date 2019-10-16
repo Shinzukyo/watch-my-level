@@ -11,4 +11,4 @@ app.use(morgan('dev'));
 RouterBuilder.build(app);
 
 const port = process.env.PORT || 3001;
-app.listen(port, () => console.log(`LINK START !!! Welcome on server ${port}...`));
+app.listen(port, () => console.log(`Api Start on server ${port}...`));
