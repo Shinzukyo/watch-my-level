@@ -2,21 +2,15 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const MediaController = require('../controllers').MediaController;
-
-const path = require('path');
-
+const ProductController = require('../controllers').ProductController;
 
 const router = express.Router();
 router.use(bodyParser.json());
 
-router.get('/picture/:name', async (req, res) => {
-    res.sendFile(path.join(__dirname, '../assets/img/', req.params.name));
-});
 
 router.post('/', async (req, res) => {
     try {
-        const p = await MediaController.add(req.body);
+        const p = await ProductController.add(req.body);
         res.json(p);
     } catch(err) {
         res.status(409).end();
@@ -24,7 +18,7 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
-    const p = await MediaController.update(req.params.id, req.body);
+    const p = await ProductController.update(req.params.id, req.body);
     if(p) {
         return res.json(p);
     }
@@ -32,7 +26,7 @@ router.put('/:id', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-    const p = await MediaController.getById(req.params.id);
+    const p = await ProductController.getById(req.params.id);
     if(p) {
         return res.json(p);
     }
@@ -41,7 +35,7 @@ router.get('/:id', async (req, res) => {
 });
 
 router.get('/', async (req, res) => {
-    const p = await MediaController.getAll();
+    const p = await ProductController.getAll();
     if(p) {
         return res.json(p).status(200);
     }
@@ -49,7 +43,7 @@ router.get('/', async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-    const p = await MediaController.delete(req.params.id);
+    const p = await ProductController.delete(req.params.id);
     if(p !== 0) {
         res.status(200).end();
     }

@@ -3,6 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const UserController = require('../controllers').UserController;
+const ConfigurationController = require('../controllers').ConfigurationController;
 
 const router = express.Router();
 router.use(bodyParser.json());
@@ -10,6 +11,11 @@ router.use(bodyParser.json());
 router.post('/', async (req, res) => {
     try {
         const p = await UserController.add(req.body);
+        const userIds = [];
+        for ( const user of p ){
+            userIds.push({idUser:user.dataValues.id});
+        }
+        await ConfigurationController.add(userIds);
         res.json(p);
     } catch(err) {
         res.status(409).end();
@@ -26,10 +32,10 @@ router.put('/:id', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     const p = await UserController.login(req.body);
-    if(p.success) {
-        res.json(p);
-    } else {
+    if(p.success === false) {
         res.status(401).send(p).end();
+    } else {
+        res.json(p);
     }
 
 });

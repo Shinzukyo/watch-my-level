@@ -16,7 +16,6 @@ class Controller {
         }else{
             return this.model.create(arrayOrFields);
         }
-
     }
 
     async getAll() {
