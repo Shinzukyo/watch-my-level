@@ -23,7 +23,7 @@ class UserController extends Controller{
                 return {success: false, message: "User not found."};
             } else {
                 if (user.password === body.password ) {
-                    return {success: true, user: user};
+                    return user;
                 } else {
                     return {success: false, message: "Wrong password"};
                 }

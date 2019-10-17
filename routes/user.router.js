@@ -26,10 +26,10 @@ router.put('/:id', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     const p = await UserController.login(req.body);
-    if(p.success) {
-        res.json(p);
-    } else {
+    if(p.success === false) {
         res.status(401).send(p).end();
+    } else {
+        res.json(p);
     }
 
 });
