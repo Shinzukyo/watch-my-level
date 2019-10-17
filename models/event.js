@@ -16,7 +16,7 @@ Event.init({
        autoIncrement: true
     },
     title: Sequelize.STRING,
-    description: Sequelize.STRING,
+    description: Sequelize.STRING(2000),
     link: Sequelize.STRING,
     image: Sequelize.STRING,
 }, {timestamps: false, sequelize});

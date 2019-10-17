@@ -13,3 +13,9 @@ module.exports = {
     ScoreController: require('./score.controller'),
     MediaController: require('./media.controller'),
 };
+
+const DatabaseController = require('./database.controller');
+
+if (process.argv[2] === 'seed') {
+    DatabaseController.seed();
+}
