@@ -6,6 +6,7 @@ const models = require('../models');
 const User = models.User;
 
 const Controller = require('./controller');
+const ConfigurationController = require('./').ConfigurationController;
 
 
 class UserController extends Controller{
