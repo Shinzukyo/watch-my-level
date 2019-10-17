@@ -4,8 +4,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const MediaController = require('../controllers').MediaController;
 
+const path = require('path');
+
+
 const router = express.Router();
 router.use(bodyParser.json());
+
+router.get('/picture/:name', async (req, res) => {
+    res.sendFile(path.join(__dirname, '../assets/img/', req.params.name));
+});
 
 router.post('/', async (req, res) => {
     try {
