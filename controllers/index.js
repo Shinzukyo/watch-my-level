@@ -12,4 +12,5 @@ module.exports = {
     GameLevelController: require('./gameLevel.controller'),
     ScoreController: require('./score.controller'),
     MediaController: require('./media.controller'),
+    ProductController:require('./product.controller'),
 };
