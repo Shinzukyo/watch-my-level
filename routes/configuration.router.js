@@ -3,9 +3,26 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const ConfigurationController = require('../controllers').ConfigurationController;
+const path = require('path');
 
 const router = express.Router();
 router.use(bodyParser.json());
+
+router.get('/test', async (req, res) => {
+    console.log(path.join(__dirname, '../assets/img/', 'bracelet_1.png'));
+    res.sendFile(path.join(__dirname, '../assets/img/', 'bracelet_1.png'));
+});
+
+router.post('/configurationElement/:id', async (req, res) => {
+    const userId = req.params.id;
+    const element = req.body;
+    try {
+        const p = await ConfigurationController.add(req.body);
+        res.json(p);
+    } catch(err) {
+        res.status(409).end();
+    }
+});
 
 router.post('/', async (req, res) => {
     try {
