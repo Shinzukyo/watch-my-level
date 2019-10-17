@@ -10,6 +10,9 @@ class ConfigurationElementLinkController extends Controller{
     constructor() {
         super(ConfigurationElementLink);
     }
+    async createOrUpdateConfigUser(idUser, idElement) {
+
+    }
 }
 
 module.exports = new ConfigurationElementLinkController();
