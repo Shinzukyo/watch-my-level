@@ -1,5 +1,5 @@
 'use strict';
-
+var sequelize = require('sequelize');
 const models = require('../models');
 const Score = models.Score;
 
@@ -12,8 +12,10 @@ class ScoreController extends Controller {
     }
 
     async getRankingWithUser(id) {
-        Score.findAll({
-            order: sequelize.literal('max(score) DESC')
+        return Score.findAll({
+            attributes: ['idUser', [sequelize.fn('sum', sequelize.col('value')), 'sum']],
+            order: sequelize.literal('sum DESC'),
+            group: ['Score.idUser']
         })
     }
 }
