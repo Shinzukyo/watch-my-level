@@ -4,7 +4,7 @@
   "description": "Watch My Level mobile app API",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js test",
+    "start": "node index.js",
     "resetDb": "node index.js deleteDb",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
