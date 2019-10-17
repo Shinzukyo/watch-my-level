@@ -13,17 +13,6 @@ router.get('/test', async (req, res) => {
     res.sendFile(path.join(__dirname, '../assets/img/', 'bracelet_1.png'));
 });
 
-router.post('/configurationElement/:id', async (req, res) => {
-    const userId = req.params.id;
-    const element = req.body;
-    try {
-        const p = await ConfigurationController.add(req.body);
-        res.json(p);
-    } catch(err) {
-        res.status(409).end();
-    }
-});
-
 router.post('/', async (req, res) => {
     try {
         const p = await ConfigurationController.add(req.body);

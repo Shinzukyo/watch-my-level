@@ -15,7 +15,10 @@ User.init({
         primaryKey: true,
         autoIncrement: true
     },
-    username: Sequelize.STRING,
+    username: {
+        type: Sequelize.STRING,
+        unique: true
+    },
     password: Sequelize.STRING,
 }, {timestamps: false, sequelize});
 
