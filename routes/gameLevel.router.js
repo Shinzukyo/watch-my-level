@@ -7,15 +7,6 @@ const GameLevelController = require('../controllers').GameLevelController;
 const router = express.Router();
 router.use(bodyParser.json());
 
-router.post('/shuffle', async (req, res) => {
-    try {
-        const p = GameLevelController.shuffleArray(req.body);
-        res.json(p);
-    } catch(err) {
-        res.status(409).end();
-    }
-});
-
 router.post('/', async (req, res) => {
     try {
         const p = await GameLevelController.add(req.body);

@@ -4,8 +4,21 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const ConfigurationController = require('../controllers').ConfigurationController;
 
+const path = require('path');
+const fs = require('fs');
+
 const router = express.Router();
 router.use(bodyParser.json());
+
+router.get('/test', async (req, res) => {
+    fs.access(__dirname + '/../assets/img/' + 'bracelets_1.png', fs.F_OK, (error) => {
+        if (error) {
+            res.status(404).end();
+        }else{
+            res.sendFile(path.join(__dirname, '../assets/img/', 'bracelet_1.png'));
+        }
+    });
+});
 
 router.post('/', async (req, res) => {
     try {
@@ -30,7 +43,6 @@ router.get('/:id', async (req, res) => {
         return res.json(p);
     }
     res.status(404).end();
-
 });
 
 router.get('/', async (req, res) => {

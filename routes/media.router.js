@@ -6,13 +6,30 @@ const MediaController = require('../controllers').MediaController;
 
 const path = require('path');
 
+const fs = require('fs');
 
 const router = express.Router();
 router.use(bodyParser.json());
 
-router.get('/picture/:name', async (req, res) => {
-    res.sendFile(path.join(__dirname, '../assets/img/', req.params.name));
+router.get('/shuffledLevel/:level', async (req, res) => {
+    const p = await MediaController.getShuffledMediaByGameLevelId(req.params.level);
+    if(p) {
+        return res.json(p);
+    }
+    res.status(404).end();
 });
+
+router.get('/picture/:name', async (req, res) => {
+    fs.access(__dirname + '/../assets/img/' + req.params.name, fs.F_OK, (error) => {
+        if (error) {
+            res.status(404).end();
+        }else{
+            res.sendFile(path.join(__dirname, '../assets/img/', req.params.name));
+        }
+    });
+});
+
+
 
 router.post('/', async (req, res) => {
     try {
@@ -37,7 +54,6 @@ router.get('/:id', async (req, res) => {
         return res.json(p);
     }
     res.status(404).end();
-
 });
 
 router.get('/', async (req, res) => {
