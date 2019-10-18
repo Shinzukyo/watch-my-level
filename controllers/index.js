@@ -6,7 +6,7 @@ module.exports = {
     ConfigurationController: require('./configuration.controller'),
     ElementTypeController: require('./elementType.controller'),
     ElementController: require('./element.controller'),
-    ConfigurationElementLinkController: require('./element.controller'),
+    ConfigurationElementLinkController: require('./configurationElementLink.controller'),
     OrderController: require('./order.controller'),
     OrderConfigurationLinkController: require('./orderConfigurationLink.controller'),
     GameLevelController: require('./gameLevel.controller'),
