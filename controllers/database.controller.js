@@ -160,22 +160,22 @@ const data = {
     'product' : [
         {
             'label' : 'Montre à bracelet rouge',
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula eros eget cursus rhoncus. Vestibulum ante ipsum primis',
-            'price' : 249.00
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'price' : 129.00
         },
         {
             'label' : 'Montre à bracelet vert',
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula eros eget cursus rhoncus. Vestibulum ante ipsum primis',
-            'price' : 249.00
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'price' : 159.00
         },
         {
             'label' : 'Montre à bracelet bleu',
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula eros eget cursus rhoncus. Vestibulum ante ipsum primis',
-            'price' : 249.00
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'price' : 199.00
         },
         {
             'label' : 'Montre à bracelet orange',
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula eros eget cursus rhoncus. Vestibulum ante ipsum primis',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'price' : 249.00
         }
     ]
