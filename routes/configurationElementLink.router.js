@@ -49,4 +49,13 @@ router.delete('/:id', async (req, res) => {
     res.status(404).end();
 });
 
+router.post('/', async (req, res) => {
+    try {
+        const p = await ConfigurationElementLinkController.createOrUpdateConfigUser(req.body.idUser, req.body.idElement);
+        res.json(p);
+    } catch(err) {
+        res.status(409).end();
+    }
+});
+
 module.exports = router;
