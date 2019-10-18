@@ -1,58 +1,83 @@
 {
-  "elementTypes" : [
+  'elementTypes' : [
     {
-      "name" : "Cadran",
-      "description" : "Super description du cadran"
+      'name' : 'Cadran',
+      'description' : 'Super description du cadran'
     },
     {
-      "name" : "Boitier",
-      "description" : "Super description du boitier"
+      'name' : 'Boitier',
+      'description' : 'Super description du boitier'
     },
     {
-      "name" : "Bracelet",
-      "description" : "Super description du bracelet"
+      'name' : 'Bracelet',
+      'description' : 'Super description du bracelet'
     }
   ],
-  "gameLevels" : [
+  'gameLevels' : [
     {
-      "idElementType" : 1
+      'idElementType' : 1
     },
     {
-      "idElementType" : 2
+      'idElementType' : 2
     },
     {
-      "idElementType" : 3
+      'idElementType' : 3
     }
   ],
-  "user" : [
+  'user' : [
     {
-      "username": "test",
-      "password": "test"
+      'username': 'test',
+      'password': 'test'
     },
     {
-      "username": "admin",
-      "password": "admin"
+      'username': 'admin',
+      'password': 'admin'
     },
     {
-      "username": "user",
-      "password": "user"
+      'username': 'user',
+      'password': 'user'
     }
   ],
-  "score" : [
+  'score' : [
     {
-      "value" : 4000,
-      "idUser": 1,
-      "idGameLevel": 1
+      'value' : 4000,
+      'idUser': 1,
+      'idGameLevel': 1
     },
     {
-      "value" : 7000,
-      "idUser": 1,
-      "idGameLevel": 2
+      'value' : 7000,
+      'idUser': 1,
+      'idGameLevel': 2
     },
     {
-      "value" : 13333,
-      "idUser": 1,
-      "idGameLevel": 3
+      'value' : 13333,
+      'idUser': 1,
+      'idGameLevel': 3
+    }
+  ],
+  'event' : [
+    {
+      'title': 'Démonstration !',
+      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula eros eget cursus rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec elit lectus, accumsan et vehicula eleifend, sollicitudin a sapien. Nunc accumsan nunc orci, at blandit dolor suscipit sit amet. Duis pulvinar id dolor sed lacinia. Cras eleifend, nunc ac porttitor imperdiet, odio tortor tincidunt ligula, eu congue urna ipsum ut nisi. Ut euismod tortor eget mi facilisis iaculis',
+      'link': 'https://google.fr',
+      'image': 'localhost:6789/media/picture/watch_display.jpg'
+    },
+    {
+      'title': 'Présentation !',
+      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula eros eget cursus rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec elit lectus, accumsan et vehicula eleifend, sollicitudin a sapien. Nunc accumsan nunc orci, at blandit dolor suscipit sit amet. Duis pulvinar id dolor sed lacinia. Cras eleifend, nunc ac porttitor imperdiet, odio tortor tincidunt ligula, eu congue urna ipsum ut nisi. Ut euismod tortor eget mi facilisis iaculis',
+      'link': 'https://google.fr',
+      'image': 'localhost:6789/media/picture/watch_display.jpg'
+    },
+    {
+      'title': 'Oui !',
+      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula eros eget cursus rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec elit lectus, accumsan et vehicula eleifend, sollicitudin a sapien. Nunc accumsan nunc orci, at blandit dolor suscipit sit amet. Duis pulvinar id dolor sed lacinia. Cras eleifend, nunc ac porttitor imperdiet, odio tortor tincidunt ligula, eu congue urna ipsum ut nisi. Ut euismod tortor eget mi facilisis iaculis',
+      'link': 'https://google.fr',
+      'image': "localhost:6789/media/picture/watch_display.jpg"
+    },
+    {
+      'title': 'Super !',
+      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula eros eget cursus rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec elit lectus, accumsan et vehicula eleifend, sollicitudin a sapien. Nunc accumsan nunc orci, at blandit dolor suscipit sit amet. Duis pulvinar id dolor sed lacinia. Cras eleifend, nunc ac porttitor imperdiet, odio tortor tincidunt ligula, eu congue urna ipsum ut nisi. Ut euismod tortor eget mi facilisis iaculis',
+      'link': 'https://google.fr',
+      'image': 'localhost:6789/media/picture/watch_display.jpg'},
     }
   ]
-}

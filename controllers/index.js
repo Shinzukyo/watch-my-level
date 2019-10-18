@@ -12,4 +12,11 @@ module.exports = {
     GameLevelController: require('./gameLevel.controller'),
     ScoreController: require('./score.controller'),
     MediaController: require('./media.controller'),
+    ProductController:require('./product.controller'),
 };
+
+const DatabaseController = require('./database.controller');
+
+if (process.argv[2] === 'seed') {
+    DatabaseController.seed();
+}

@@ -13,6 +13,7 @@ class RouterBuilder {
         app.use('/gameLevel', require('./gameLevel.router'));
         app.use('/score', require('./score.router'));
         app.use('/media', require('./media.router'));
+        app.use('/product', require('./product.router'));
     }
 }
 

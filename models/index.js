@@ -14,6 +14,7 @@ module.exports = {
     GameLevel: require('./gameLevel'),
     Score: require('./score'),
     Media: require('./media'),
+    Product: require('./product'),
 };
 
 require('./relationship');
