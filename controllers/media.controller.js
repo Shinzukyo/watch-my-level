@@ -32,7 +32,6 @@ class MediaController extends Controller{
     }
 
     shuffleArray(array) {
-        console.log(array);
         const clone = array.slice(0);
         array = array.concat(clone);
         array = this.shuffle(array);
