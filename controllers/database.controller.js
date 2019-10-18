@@ -6,6 +6,7 @@ const EventController = require('../controllers').EventController;
 const MediaController = require('../controllers').MediaController;
 const GameLevelController = require('../controllers').GameLevelController;
 const ElementTypeController = require('../controllers').ElementTypeController;
+const ProductController = require('../controllers').ProductController;
 
 const data = {
     'elementType' : [
@@ -132,7 +133,7 @@ const data = {
     ],
     'event' : [
         {
-            'title': 'Démonstration !',
+            'title': 'Démonstration de l\'application ',
             'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula eros eget cursus rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec elit lectus, accumsan et vehicula eleifend, sollicitudin a sapien. Nunc accumsan nunc orci, at blandit dolor suscipit sit amet. Duis pulvinar id dolor sed lacinia. Cras eleifend, nunc ac porttitor imperdiet, odio tortor tincidunt ligula, eu congue urna ipsum ut nisi. Ut euismod tortor eget mi facilisis iaculis',
             'link': 'https://google.fr',
             'image': 'localhost:6789/media/picture/watch_display.jpg'
@@ -155,22 +156,47 @@ const data = {
             'link': 'https://google.fr',
             'image': 'localhost:6789/media/picture/watch_display.jpg'
         }
+    ],
+    'product' : [
+        {
+            'label' : 'Montre à bracelet rouge',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula eros eget cursus rhoncus. Vestibulum ante ipsum primis',
+            'price' : 249.00
+        },
+        {
+            'label' : 'Montre à bracelet vert',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula eros eget cursus rhoncus. Vestibulum ante ipsum primis',
+            'price' : 249.00
+        },
+        {
+            'label' : 'Montre à bracelet bleu',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula eros eget cursus rhoncus. Vestibulum ante ipsum primis',
+            'price' : 249.00
+        },
+        {
+            'label' : 'Montre à bracelet orange',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula eros eget cursus rhoncus. Vestibulum ante ipsum primis',
+            'price' : 249.00
+        }
     ]
 };
 
 class DatabaseController{
-    seed() {
-        ElementTypeController.add(data['elementType']).then(r =>{
+    async seed() {
+        await ElementTypeController.add(data['elementType']).then(r =>{
             console.log("ElementType table seeded.");
          });
-        GameLevelController.add(data['gameLevel']).then(r =>{
+        await GameLevelController.add(data['gameLevel']).then(r =>{
             console.log("GameLevel table seeded.");
         });
-        MediaController.add(data['media']).then(r =>{
+        await MediaController.add(data['media']).then(r =>{
             console.log("Media table seeded.");
         });
-        EventController.add(data['event']).then(r =>{
+        await EventController.add(data['event']).then(r =>{
             console.log("Event table seeded.");
+        });
+        await ProductController.add(data['product']).then(r =>{
+            console.log("Product table seeded.");
         });
     }
 }
